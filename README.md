@@ -50,11 +50,11 @@ java -jar build/libs/tunnel-client-1.0.0-all.jar
 
 The client uses environment variables for configuration:
 
-| Variable | Description | Default |
-|----------|-------------|---------|
+| Variable        | Description                         | Default |
+|-----------------|-------------------------------------|---------|
 | `TUNNEL_SERVER` | WebSocket URL of your tunnel server | `wss://your-app.onrender.com` |
-| `LOCAL_PORT` | Port of your local server | `3000` |
-| `SUBDOMAIN` | Custom subdomain (optional) | Auto-generated |
+| `LOCAL_PORT`    | Port of your local server           | `3000` |
+| `TUNNEL_NAME`   | The name of the tunned              | Auto-generated |
 
 ## Features
 
@@ -82,4 +82,3 @@ TUNNEL_SERVER=wss://opi-tunnel.onrender.com LOCAL_PORT=8080 ./tunnel.sh
 
 ### Custom Subdomain
 ```bash
-# Use custom subdomain
