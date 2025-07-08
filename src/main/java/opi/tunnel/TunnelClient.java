@@ -310,8 +310,8 @@ public class TunnelClient {
     public static void main(String[] args) {
         // Configuration from environment variables or defaults
         String serverUrl = System.getenv().getOrDefault("TUNNEL_SERVER", "wss://opi-tunnel.onrender.com");
-        int localPort = Integer.parseInt(System.getenv().getOrDefault("LOCAL_PORT", "9001"));
-        String tunnelName = System.getenv().getOrDefault("TUNNEL_NAME", "aron");
+        int localPort = Integer.parseInt(System.getenv().getOrDefault("LOCAL_PORT", "8080"));
+        String tunnelName = System.getenv().getOrDefault("TUNNEL_NAME", "dev1");
 
         System.out.println("🚀 Starting Tunnel Proxy Java Client\n");
         System.out.println("   Server:     " + serverUrl);
