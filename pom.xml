@@ -43,7 +43,7 @@
     </distributionManagement>
 
     <build>
-        <finalName>tunnel</finalName>
+        <finalName>tunnel-client</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
