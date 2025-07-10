@@ -15,7 +15,7 @@ A Java client for connecting to the tunnel proxy server deployed on Render.com. 
 mvn clean compile package
 
 # Run
-TUNNEL_SERVER=wss://your-app.onrender.com LOCAL_PORT=3000 java -jar target/tunnel-client-1.0.0.jar
+java -jar target/tunnel.jar
 ```
 
 
@@ -44,11 +44,11 @@ The client uses environment variables for configuration:
 ### Basic Usage
 ```bash
 # Start tunnel for localhost:3000
-TUNNEL_SERVER=wss://opi-tunnel.onrender.com LOCAL_PORT=8080 java -jar target/tunnel-client-1.0.0.jar
+TUNNEL_SERVER=wss://opi-tunnel.onrender.com LOCAL_PORT=8080 java -jar target/tunnel.jar
 ```
 
 ### Custom Port and tunnel name
 ```bash
 # Tunnel localhost:8080
-TUNNEL_SERVER=wss://opi-tunnel.onrender.com LOCAL_PORT=8080 TUNNEL_NAME=dev1 java -jar target/tunnel-client-1.0.0.jar
+TUNNEL_SERVER=wss://opi-tunnel.onrender.com LOCAL_PORT=8080 TUNNEL_NAME=dev1 java -jar target/tunnel.jar
 ```
