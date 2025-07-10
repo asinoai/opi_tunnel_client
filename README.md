@@ -10,21 +10,6 @@ A Java client for connecting to the tunnel proxy server deployed on Render.com. 
 
 ## Quick Start
 
-### 1. Using the Easy Script (Recommended)
-
-```bash
-# Make script executable
-chmod +x tunnel.sh
-
-# Run with defaults
-./tunnel.sh
-
-# Or with custom settings
-TUNNEL_SERVER=wss://your-app.onrender.com LOCAL_PORT=8080 ./tunnel.sh
-```
-
-### 2. Using Maven
-
 ```bash
 # Build
 mvn clean compile package
@@ -33,28 +18,16 @@ mvn clean compile package
 TUNNEL_SERVER=wss://your-app.onrender.com LOCAL_PORT=3000 java -jar target/tunnel-client-1.0.0.jar
 ```
 
-### 3. Using Gradle
-
-```bash
-# Build
-./gradlew build
-
-# Run directly with Gradle
-TUNNEL_SERVER=wss://your-app.onrender.com LOCAL_PORT=3000 ./gradlew runTunnel
-
-# Or run the JAR
-java -jar build/libs/tunnel-client-1.0.0-all.jar
-```
 
 ## Configuration
 
 The client uses environment variables for configuration:
 
-| Variable        | Description                         | Default |
-|-----------------|-------------------------------------|---------|
+| Variable        | Description                         | Default                       |
+|-----------------|-------------------------------------|-------------------------------|
 | `TUNNEL_SERVER` | WebSocket URL of your tunnel server | `wss://your-app.onrender.com` |
-| `LOCAL_PORT`    | Port of your local server           | `3000` |
-| `TUNNEL_NAME`   | The name of the tunned              | Auto-generated |
+| `LOCAL_PORT`    | Port of your local server           | `8080`                        |
+| `TUNNEL_NAME`   | The name of the tunned              | `dev1`                        |
 
 ## Features
 
@@ -71,14 +44,11 @@ The client uses environment variables for configuration:
 ### Basic Usage
 ```bash
 # Start tunnel for localhost:3000
-TUNNEL_SERVER=wss://opi-tunnel.onrender.com ./tunnel.sh
+TUNNEL_SERVER=wss://opi-tunnel.onrender.com LOCAL_PORT=8080 java -jar target/tunnel-client-1.0.0.jar
 ```
 
-### Custom Port
+### Custom Port and tunnel name
 ```bash
 # Tunnel localhost:8080
-TUNNEL_SERVER=wss://opi-tunnel.onrender.com LOCAL_PORT=8080 ./tunnel.sh
+TUNNEL_SERVER=wss://opi-tunnel.onrender.com LOCAL_PORT=8080 TUNNEL_NAME=dev1 java -jar target/tunnel-client-1.0.0.jar
 ```
-
-### Custom Subdomain
-```bash
